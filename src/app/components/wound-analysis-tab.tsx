@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { ChangeEvent } from 'react';
@@ -94,9 +95,9 @@ export default function WoundAnalysisTab() {
         <CardContent className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="wound-image-upload" className="text-base">Upload Wound Image</Label>
-            <div className="flex items-center gap-3">
-              <Input id="wound-image-upload" type="file" accept="image/*" onChange={handleImageChange} className="max-w-xs text-sm" />
-              <Button onClick={handleAnalyzeWound} disabled={!imageFile || isLoadingAnalysis} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <Input id="wound-image-upload" type="file" accept="image/*" onChange={handleImageChange} className="w-full sm:max-w-xs text-sm" />
+              <Button onClick={handleAnalyzeWound} disabled={!imageFile || isLoadingAnalysis} className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
                 {isLoadingAnalysis ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <UploadCloud className="mr-2 h-4 w-4" />}
                 Analyze Wound
               </Button>

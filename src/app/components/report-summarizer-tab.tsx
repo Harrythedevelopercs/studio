@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { ChangeEvent } from 'react';
@@ -62,9 +63,9 @@ export default function ReportSummarizerTab() {
         <CardContent className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="report-upload" className="text-base">Upload Report File</Label>
-            <div className="flex items-center gap-3">
-              <Input id="report-upload" type="file" accept=".pdf,.txt,.doc,.docx,image/*" onChange={handleFileChange} className="max-w-xs text-sm" />
-               <Button onClick={handleSummarizeReport} disabled={!reportFile || isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <Input id="report-upload" type="file" accept=".pdf,.txt,.doc,.docx,image/*" onChange={handleFileChange} className="w-full sm:max-w-xs text-sm" />
+               <Button onClick={handleSummarizeReport} disabled={!reportFile || isLoading} className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
                 {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <UploadCloud className="mr-2 h-4 w-4" />}
                 Summarize Report
               </Button>

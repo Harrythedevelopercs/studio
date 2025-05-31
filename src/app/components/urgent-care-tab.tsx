@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -35,7 +36,7 @@ export default function UrgentCareTab() {
               alt="Map placeholder" 
               width={600} 
               height={300} 
-              className="rounded-lg shadow-md mx-auto mb-6"
+              className="rounded-lg shadow-md mx-auto mb-6 w-full h-auto max-w-[600px]"
               data-ai-hint="map navigation"
             />
             <Button onClick={handleFindHospitals} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
